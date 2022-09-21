@@ -11,17 +11,17 @@ import TodoItem from "./TodoItem";
 
 const TodoList: React.VFC = () => {
   const todoList: any = [
-    // { id: "aaa", content: "aaa", isDone: true },
-    // { id: "bbb", content: "bbb", isDone: false },
-    // { id: "ccc", content: "ccc", isDone: true },
-    // { id: "ddd", content: "ddd", isDone: false },
-    // { id: "eee", content: "eee", isDone: true },
-    // { id: "fff", content: "fff", isDone: false },
-    // { id: "ggg", content: "ggg", isDone: true },
-    // { id: "hhh", content: "hhh", isDone: false },
-    // { id: "iii", content: "iii", isDone: true },
-    // { id: "jjj", content: "jjj", isDone: false },
-    // { id: "kkk", content: "kkk", isDone: true },
+    { id: "aaa", content: "aaa", isDone: true },
+    { id: "bbb", content: "bbb", isDone: false },
+    { id: "ccc", content: "ccc", isDone: true },
+    { id: "ddd", content: "ddd", isDone: false },
+    { id: "eee", content: "eee", isDone: true },
+    { id: "fff", content: "fff", isDone: false },
+    { id: "ggg", content: "ggg", isDone: true },
+    { id: "hhh", content: "hhh", isDone: false },
+    { id: "iii", content: "iii", isDone: true },
+    { id: "jjj", content: "jjj", isDone: false },
+    { id: "kkk", content: "kkk", isDone: true },
   ];
   return (
     <Flex flexDir="column" align="center">
