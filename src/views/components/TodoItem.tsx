@@ -5,6 +5,8 @@ import {
   RiCheckboxCircleFill,
 } from "react-icons/ri";
 import { BsFillTrashFill } from "react-icons/bs";
+import { useAppDispatch } from "../../stores/hooks";
+import { deleteTodo, updateTodo } from "../../stores/slices/todo/todoSlice";
 
 type Props = {
   id: string;
@@ -13,6 +15,13 @@ type Props = {
 };
 
 const TodoItem: React.VFC<Props> = ({ id, content, isDone }) => {
+  const dispatch = useAppDispatch();
+  const handleUpdate = () => {
+    dispatch(updateTodo(id));
+  };
+  const handleDelete = () => {
+    dispatch(deleteTodo(id));
+  };
   return (
     <Flex w="100%" align="center" justify="space-between">
       <Flex align="center">
@@ -26,10 +35,18 @@ const TodoItem: React.VFC<Props> = ({ id, content, isDone }) => {
           mr={2}
           //width = 4px * 6 = 24px
           w={6}
+          onClick={handleUpdate}
         />
         <Text fontSize="xl">{content}</Text>
       </Flex>
-      <Icon as={BsFillTrashFill} color="pink" cursor="pointer" h={5} w={5} />
+      <Icon
+        as={BsFillTrashFill}
+        color="pink"
+        cursor="pointer"
+        h={5}
+        w={5}
+        onClick={handleDelete}
+      />
     </Flex>
   );
 };
