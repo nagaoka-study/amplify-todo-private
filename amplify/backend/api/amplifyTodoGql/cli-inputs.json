@@ -3,17 +3,20 @@
   "serviceConfiguration": {
     "apiName": "amplifyTodoGql",
     "serviceName": "AppSync",
-    "gqlSchemaPath": "C:\\Users\\nagao\\Documents\\playground\\React\\youtube-tutorials\\amplify-todo\\amplify\\backend\\api\\amplifyTodoGql\\schema.graphql",
     "defaultAuthType": {
       "mode": "API_KEY",
-      "expirationTime": 365,
-      "apiKeyExpirationDate": "2023-09-22T14:05:54.310Z",
-      "keyDescription": "amplifyTodoGql AuthKey"
+      "keyDescription": "api key description",
+      "expirationTime": 30
     },
     "conflictResolution": {
       "defaultResolutionStrategy": {
         "type": "AUTOMERGE"
       }
-    }
+    },
+    "additionalAuthTypes": [
+      {
+        "mode": "AWS_IAM"
+      }
+    ]
   }
 }

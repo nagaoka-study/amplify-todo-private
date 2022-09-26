@@ -7,20 +7,17 @@ import {
   FormErrorMessage,
   Button,
 } from "@chakra-ui/react";
-import { useAppDispatch } from "../../stores/hooks";
-import { createTodo } from "../../stores/slices/todo/todoSlice";
+import { createTodoApi } from "../../stores/slices/todo/todoAPI";
 
 const AddTodo: React.VFC = () => {
-  const dispatch = useAppDispatch();
   const {
     handleSubmit,
     register,
     formState: { errors, isSubmitting },
     reset,
   } = useForm();
-  const onSubmit = (data: { content: string }) => {
-    const { content } = data;
-    dispatch(createTodo(content));
+  const onSubmit = async (data: { content: string }) => {
+    await createTodoApi(data);
     reset();
   };
   return (

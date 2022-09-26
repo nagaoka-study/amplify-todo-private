@@ -9,12 +9,15 @@
           "defaultAuthentication": {
             "authenticationType": "API_KEY",
             "apiKeyConfig": {
-              "apiKeyExpirationDays": 365,
-              "apiKeyExpirationDate": "2023-09-22T14:05:54.310Z",
-              "description": "amplifyTodoGql AuthKey"
+              "apiKeyExpirationDays": 30,
+              "description": "api key description"
             }
           },
-          "additionalAuthenticationProviders": []
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AWS_IAM"
+            }
+          ]
         }
       }
     }
