@@ -1,0 +1,6 @@
+type Todo @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  content: String!
+  isDone: Boolean!
+}
+ 

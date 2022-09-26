@@ -1,0 +1,13 @@
+{
+    "AppSyncApiName": "amplifyTodoGql",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "S3DeploymentBucket": "amplify-amplifytodo-main-175817-deployment",
+    "S3DeploymentRootKey": "amplify-appsync-files/39c5bb71685291d74fbcae3de943a9dc89d223d3"
+}
